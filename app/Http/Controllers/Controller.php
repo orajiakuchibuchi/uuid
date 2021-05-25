@@ -18,6 +18,7 @@ class Controller extends BaseController
     }
     public function showUIID(){
         $lists = $this->userService->getUUID();
+        return response()->json($lists);
         return view('table', \compact('lists'));
     }
 }
